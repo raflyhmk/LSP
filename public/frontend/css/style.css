@@ -1,0 +1,283 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: #212121;
+}
+
+i {
+    font-size: 24px;
+}
+
+.navbar {
+    border-bottom: 1px solid #212121;
+}
+
+.nav-item .nav-link {
+    font-size: 18px;
+    color: #212121 !important;
+    margin: 0px 8px 0px 8px;
+    font-weight: 300;
+}
+
+.nav-link:hover {
+    color: #2f7de1 !important;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: #2f7de1 !important;
+    color: #fff;
+}
+
+a .fa-cart-shopping {
+    border: 1px solid #212121;
+    padding: 5px;
+}
+
+a .fa-cart-shopping span {
+    font-size: 14px;
+    margin-left: 12px;
+}
+
+a .fa-cart-shopping:hover {
+    color: #2f7de1 !important;
+}
+
+.foto-profil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.btn-login {
+    background: #2f7de1 !important;
+    color: #fff;
+}
+
+.btn-login:hover {
+    background: #2d568b !important;
+    color: #fff;
+}
+
+.videoProfile iframe {
+    width: 400px;
+    height: 285px;
+}
+
+.title {
+    font-size: 24px;
+    color: #212121 !;
+    border-bottom: 3px solid #2f7de1;
+    width: 400px;
+    padding-bottom: 12px;
+}
+
+.figure a:hover {
+    color: #2f7de1 !important;
+}
+
+.figure img {
+    width: 261px;
+    height: 261px;
+}
+
+a .namaFigure {
+    font-size: 15px;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+.hargaFigure {
+    font-size: 16px;
+}
+
+.btn-showAll {
+    width: 400px;
+    border-color: #2f7de1 !important;
+    color: #2f7de1 !important;
+}
+
+.btn-showAll:hover {
+    width: 400px;
+    background: #2f7de1 !important;
+    color: #fff !important;
+}
+
+.descTitle {
+    font-size: 13px;
+    width: 450px;
+}
+
+.jastip {
+    width: 800px;
+}
+
+.file-text {
+    font-size: 12px;
+}
+
+.btn-jastip {
+    background: #ff715d !important;
+    color: #fff !important;
+    border: none;
+    width: 120px;
+}
+
+.btn-jastip:hover {
+    background: #c84d3d !important;
+    color: #fff !important;
+}
+
+.maps iframe {
+    width: 450px;
+    height: 270px;
+}
+
+p.descFiguartZ {
+    font-size: 12px;
+}
+
+footer {
+    border-top: 1px solid #2f7de1;
+}
+
+.descToko {
+    font-size: 14px;
+}
+
+.kontakToko i {
+    margin-right: 12px;
+    font-size: 30px;
+    margin-top: -15px;
+}
+
+.listProduk {
+    margin-top: -10px;
+}
+
+.listProduk a {
+    text-decoration: none;
+}
+
+.form-subscribe {
+    width: 170px;
+    margin-right: 12px;
+}
+
+.btn-subs {
+    width: 120px !important;
+    color: #fff !important;
+    background: #2f7de1 !important;
+}
+
+.btn-subs:hover {
+    background: #3270c0 !important;
+}
+
+.CP-footer {
+    border-top: 1px solid #212121;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.CP-footer h5 {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.pesanSukses {
+    font-size: 14px;
+    width: 400px;
+}
+
+/* halaman detail produk */
+#breadcrumbs {
+    background: #f0f0f0 !important;
+}
+
+.detailProduk img {
+    width: 535px;
+    height: 485px;
+}
+
+.detailProduk .namaFigure {
+    font-size: 24px;
+}
+
+.detailProduk .hargaProduk {
+    color: #2f7de1;
+    font-size: 22px;
+}
+
+.detailProduk .aboutProduk {
+    font-size: 13px;
+    line-height: 37px;
+}
+
+.catatanProduk {
+    margin-left: -20px;
+    font-size: 13px;
+}
+
+.btn-keranjang {
+    background: #2f7de1 !important;
+    color: #fff !important;
+}
+
+.btn-keranjang:hover {
+    background: #2f7de1 !important;
+    color: #fff !important;
+}
+
+.previewProduk img {
+    width: 105px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.titleRecommendation {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+/* end halaman detail produk */
+
+@media (min-width: 968px) {
+    .videoProfile iframe {
+        width: 565px;
+        height: 315px;
+    }
+    .maps iframe {
+        width: 720px;
+        height: 350px;
+    }
+}
+
+/* product page */
+.btn-search {
+    border-color: #2f7de1 !important;
+    color: #2f7de1 !important;
+}
+
+.btn-search:hover {
+    background: #2f7de1 !important;
+    color: #fff !important;
+}
+
+/* login page */
+.titleLogin {
+    font-size: 28px;
+}
+
+.register a {
+    text-decoration: none;
+    color: #2f7de1;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
