@@ -25,6 +25,12 @@ Route::get('/', function () {
 Route::get('/profile', [userController::class, 'profile']);
 Route::put('/profile', [userController::class, 'editProfile']);
 Route::get('/medical-supplies', [userController::class, 'medicalSupplies']);
+Route::get('/history-supplies', [userController::class, 'historySupplies']);
+Route::post('/borrow-item', [userController::class, 'borrowItem'])->name('borrow.item');
+Route::post('/request-return/{id}', [userController::class, 'requestReturn'])->name('request.return');
+Route::post('/admin/approve-return/{id}', [adminController::class, 'approveReturn'])->name('approve.return');
+
+
 
 
 // auth proses (login, register, forget password)

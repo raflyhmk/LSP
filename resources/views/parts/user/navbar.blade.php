@@ -20,7 +20,7 @@
         <div class="navbar-nav mx-auto">
           <a class="nav-link me-4" href="/">Beranda</a>
           <a class="nav-link me-4" href="/medical-supplies">Medical supplies</a>
-          <a class="nav-link me-4" href="#">About us</a>
+          <a class="nav-link me-4" href="/history-supplies">History</a>
           <a class="nav-link me-4">Review</a>
         </div>
         @guest
