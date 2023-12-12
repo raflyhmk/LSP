@@ -15,8 +15,10 @@ class CreateBorrowsTable extends Migration
             $table->date('borrow_date');
             $table->date('return_date');
             $table->timestamps();
+            $table->boolean('is_return_requested')->default(false);
+            $table->boolean('is_return_approved')->default(false);
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('medic_id')->references('id')->on('medics');
         });
     }

@@ -98,7 +98,7 @@ class adminController extends Controller
     public function deleteUser($id)
     {
        $deleteUser = User::find($id);
-        if ($deleteUser->borrows()->count() > 0) {
+        if ($deleteUser->borrows()->where('is_return_approved', 0)->count() > 0)  {
             Session::flash('status', 'failed');
             Session::flash('message', 'Tidak bisa menghapus user yang masih memiliki peminjaman yang sedang berlangsung');
             return redirect('/admin/list-user');
