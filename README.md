@@ -2,10 +2,11 @@
 
 ## MediPrime
 
--Nama Kelompok = MediPrime
+- Nama Kelompok = MediPrime
 - Muhammad Rafly Hamka
 - M Rayhan Ampurama
--Nama Project  = Penyewaan alat Kesehatan (MediPrime)
+- Nama Project  = Penyewaan alat Kesehatan (MediPrime)
+
 
 ## List Fitur
 
