@@ -69,6 +69,7 @@
                                 <h3 class="hargaFigure mt-3 fw-bold">
                                     Kategori: {{ $ms->kategori }}
                                 </h3>
+                                @if(Auth::check() && Auth::user()->admin === 'False')
                                 <button type="button" class="btn btn-outline-primary mt-3"
                                     onclick="event.preventDefault(); document.getElementById('borrow-form-{{ $ms->id }}').submit();">
                                     Ajukan Peminjaman
@@ -78,6 +79,7 @@
                                     @csrf
                                     <input type="hidden" name="medic_id" value="{{ $ms->id }}">
                                 </form>
+                                @endauth
                             </a>
                         </div>
                     @endforeach

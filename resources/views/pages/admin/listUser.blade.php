@@ -54,9 +54,9 @@
                     <tbody>
                         @foreach($listUser as $lu)
                       <tr>
-                        <td class="text-capitalize align-middle">{{$lu -> id}}</td>
-                        <td class="text-capitalize align-middle">{{$lu -> name}}</td>
-                        <td class="text-capitalize align-middle">{{$lu -> email}}</td>
+                        <td class="align-middle">{{$lu -> id}}</td>
+                        <td class="align-middle">{{$lu -> name}}</td>
+                        <td class="align-middle">{{$lu -> email}}</td>
                         <td class="align-middle">
                             <a href="/admin/edit-user/{{$lu -> id}}"class="btn btn-warning btn-circle btn-sm button-edit mr-1 mb-1"><i class="fas fa-edit"></i></a>
                             <button type="button" class="btn btn-danger btn-circle btn-sm mr-1 mb-1" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-trash"></i></button>
@@ -71,7 +71,7 @@
         <!-- delete modal -->       
     </div>
     @if(count($listUser) > 0)
-        <form action="/admin/hapus-admin/{{$lu->id}}" method="post">
+        <form action="/admin/hapus-user/{{$lu->id}}" method="post">
           @csrf
           @method('delete')
           <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

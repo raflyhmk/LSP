@@ -89,13 +89,21 @@
                 <h3 class="hargaFigure mt-3 fw-bold">
                  Kategori: {{$ak -> kategori}}
                 </h3>
-                <button type="button" class="btn btn-outline-primary mt-3">Ajukan peminjaman</button>
+                @if(Auth::check() && Auth::user()->admin === 'False')
+                  <button type="button" class="btn btn-outline-primary mt-3" onclick="event.preventDefault(); document.getElementById('borrow-form-{{ $ak->id }}').submit();">
+                    Ajukan Peminjaman
+                  </button>
+                  <form id="borrow-form-{{ $ak->id }}" action="{{ route('borrow.item') }}" method="POST" style="display: none;">
+                    @csrf
+                    <input type="hidden" name="medic_id" value="{{ $ak->id }}">
+                  </form>
+                @endauth
               </a>
             </div>
             @endforeach
           </div>
           <center>
-            <a href="/alat-kesehatan"
+            <a href="/medical-supplies"
               ><button
                 type="button"
                 class="btn btn-outline-primary btn-showAll mt-4"
@@ -128,12 +136,42 @@
       </div>
       <!-- end google maps -->
 
-
-
     <!-- footer -->
     <div class="mt-5">
     @include('parts.user.footer')
     </div>
     <!-- end  footer -->
+
+    <!-- toast -->
+    @if (session('success'))
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Notification</strong>
+          <small>Just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ session('success') }}
+        </div>
+      </div>
+    </div>
+    @endif
+
+    @if (session('error'))
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Notification</strong>
+          <small>Just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ session('error') }}
+        </div>
+      </div>
+    </div>
+    @endif
+    <!-- end toast -->
     
 @endsection

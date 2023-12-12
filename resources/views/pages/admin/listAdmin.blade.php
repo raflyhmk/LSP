@@ -27,7 +27,7 @@
         <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                  <button type="button" class="btn btn-primary" onclick="event.preventDefault(); location.href='{{ url('admin/tambah-alat-kesehatan') }}';">
+                  <button type="button" class="btn btn-primary" onclick="event.preventDefault(); location.href='{{ url('admin/tambah-admin') }}';">
                     Tambah Admin
                   </button>
                 </h6>
@@ -42,7 +42,7 @@
                   >
                     <thead>
                       <tr>
-                        <th>No. karyawan</th>
+                        <th>ID. karyawan</th>
                         <th>Nama</th>
                         <th>Email</th>
                         <th>opsi</th>
@@ -50,7 +50,7 @@
                     </thead>
                     <tfoot>
                       <tr>
-                        <th>No. karyawan</th>
+                        <th>ID. karyawan</th>
                         <th>Nama</th>
                         <th>Email</th>
                         <th>opsi</th>
@@ -59,11 +59,11 @@
                     <tbody>
                         @foreach($listAdmin as $la)
                       <tr>
-                        <td class="text-capitalize align-middle">{{$la -> id}}</td>
-                        <td class="text-capitalize align-middle">{{$la -> name}}</td>
-                        <td class="text-capitalize align-middle">{{$la -> email}}</td>
+                        <td class="align-middle">{{$la -> id}}</td>
+                        <td class="align-middle">{{$la -> name}}</td>
+                        <td class="align-middle">{{$la -> email}}</td>
                         <td class="align-middle">
-                            <a href="/admin/edit-user/{{$la -> id}}"class="btn btn-warning btn-circle btn-sm button-edit mr-1 mb-1"><i class="fas fa-edit"></i></a>
+                            <a href="/admin/edit-admin/{{$la -> id}}"class="btn btn-warning btn-circle btn-sm button-edit mr-1 mb-1"><i class="fas fa-edit"></i></a>
                             <button type="button" class="btn btn-danger btn-circle btn-sm mr-1 mb-1" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-trash"></i></button>
                         </td>  
                       </tr>
@@ -76,7 +76,7 @@
         <!-- delete modal -->       
     </div>
     @if(count($listAdmin) > 0)
-        <form action="/admin/hapus-admin/{{$lm->id}}" method="post">
+        <form action="/admin/hapus-admin/{{$la->id}}" method="post">
           @csrf
           @method('delete')
           <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

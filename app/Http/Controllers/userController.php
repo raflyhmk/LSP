@@ -43,7 +43,7 @@ class userController extends Controller
         $cari = $request->cari;
         $allData = 10;
         $medicalSupplies = Medic::where('name', 'LIKE', '%' . $cari . '%')
-            ->orWhere('kategori', $cari)
+            ->orWhere('kategori', 'LIKE', '%' . $cari . '%')
             ->paginate($allData);
         return view('pages.user.medicalSupplies', compact('medicalSupplies'));
     }
@@ -51,12 +51,9 @@ class userController extends Controller
     public function borrowItem(Request $request)
     {
         $user_id = Auth::user()->id;
-
-
         $borrowCount = Borrow::where('user_id', $user_id)->count();
 
         if ($borrowCount >= 2) {
-
             return redirect()->back()->with('error', 'Anda hanya dapat meminjam maksimal 2 kali.');
         }
 

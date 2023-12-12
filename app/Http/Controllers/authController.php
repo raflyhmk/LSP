@@ -45,10 +45,14 @@ class authController extends Controller
             'password' => ['required']
         ]);
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect('/');
+        $request->session()->regenerate();
+
+        if (Auth::user()->admin === 'True') {
+            return redirect('/admin/dashboard');
         }
+
+        return redirect('/');
+    }
         Session::flash('status', 'failed');
         Session::flash('message', 'proses login gagal');
         return redirect('/login');
