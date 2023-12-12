@@ -2,10 +2,10 @@
 
 ## MediPrime
 
-Nama Kelompok : MediPrime
-Anggota       : Muhammad Rafly Hamka
-                M Rayhan Ampurama
-Nama Project  : Penyewaan alat Kesehatan (MediPrime)
+-Nama Kelompok : MediPrime
+-Anggota       :- Muhammad Rafly Hamka
+                - M Rayhan Ampurama
+-Nama Project  : Penyewaan alat Kesehatan (MediPrime)
 
 ## List Fitur
 
