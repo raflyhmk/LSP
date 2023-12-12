@@ -51,10 +51,11 @@ class userController extends Controller
     public function borrowItem(Request $request)
     {
         $user_id = Auth::user()->id;
-        $borrowCount = Borrow::where('user_id', $user_id)->count();
-
+        $borrowCount = Borrow::where('user_id', $user_id)
+            ->where('is_return_approved', 0)
+            ->count();
         if ($borrowCount >= 2) {
-            return redirect()->back()->with('error', 'Anda hanya dapat meminjam maksimal 2 kali.');
+            return redirect()->back()->with('error', 'Anda maksimal meminjam barang 2 kali disaat yang bersamaan.');
         }
 
         $borrow = new Borrow();
